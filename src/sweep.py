@@ -1,4 +1,4 @@
-# 53126
+#53126
 import logging
 import builtins
 from termcolor import colored
@@ -97,31 +97,23 @@ for x in range(len(df)):
         result = ansys_runner.run_solver(input_params, wb)
         
         # After extracting values, print formatted table
-        # After extracting values, print formatted table
         if result.get('success'):
             output_data = result.get('output_parameters', {})
             
-            # Collect all values with consistent 20-char formatting
-            input_vals = [
-                f"{float(input_params['beam_height']):^20.4f}",
-                f"{float(input_params['beam_width']):^20.4f}",
-                f"{float(input_params['fillet_size']):^20.4f}",
-                f"{float(input_params['beam_length']):^20.4f}"
-            ]
-            
-            output_vals = []
+            # Collect all values
+            values = []
             for wb_param, df_col in OUTPUT_MAPPING.items():
                 if wb_param in output_data:
                     numeric_val = extract_numeric_value(output_data[wb_param])
                     df.loc[x, df_col] = numeric_val
-                    output_vals.append(f"{numeric_val:^20.4f}")
+                    values.append(f"{numeric_val:>10.4f}")
                 else:
-                    output_vals.append(f"{'N/A':^20}")
+                    values.append(f"{'N/A':>10}")
             
             # Print header with colored pipe separators
             if x == 0 or x % 10 == 0:
                 header = (f"{colored('height', 'cyan'):^20} {colored('|', 'yellow')} "
-                        f"{colored('width', 'cyan'):^20} {colored('|', 'yellow')} "
+                        f"{colored('width ', 'cyan'):^20} {colored('|', 'yellow')} "
                         f"{colored('fillet', 'cyan'):^20} {colored('|', 'yellow')} "
                         f"{colored('length', 'cyan'):^20} {colored('|', 'yellow')} "
                         f"{colored('Mode1', 'green'):^20} {colored('|', 'yellow')} "
@@ -131,11 +123,14 @@ for x in range(len(df)):
                         f"{colored('Deform', 'magenta'):^20} {colored('|', 'yellow')} "
                         f"{colored('Stress', 'red'):^20}")
                 print("\n" + header)
-                print(colored("-" * (20*10 + 9*3), 'yellow'))  # 20 cols * 10 + 9 separators * 3 chars
+                print(colored("------------------------------------------------------------------------------------------------------------------------------------", 'yellow'))
             
-            # Print values row
-            all_cols = input_vals + output_vals
-            values_row = f" {colored('|', 'yellow')} ".join(all_cols)
+            # Print values row with input parameters first
+            values_row = (f"{float(input_params['beam_height']):^20} {colored('|', 'yellow')} "
+                        f"{float(input_params['beam_width']):^20} {colored('|', 'yellow')} "
+                        f"{float(input_params['fillet_size']):^20} {colored('|', 'yellow')} "
+                        f"{float(input_params['beam_length']):^20} {colored('|', 'yellow')} "
+                        f"{' | '.join(values)}")
             print(values_row)
             
             df.to_csv(dataset_path, index=False)

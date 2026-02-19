@@ -1,0 +1,86 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+integer1 = StartServer()
+parameter1 = Parameters.GetParameter(Name="P5")
+parameter1.Expression = "10.0 [mm]"
+parameter2 = Parameters.GetParameter(Name="P1")
+parameter2.Expression = "5.0 [mm]"
+parameter3 = Parameters.GetParameter(Name="P4")
+parameter3.Expression = "0.4 [mm]"
+parameter4 = Parameters.GetParameter(Name="P3")
+parameter4.Expression = "0.4 [mm]"
+parameter5 = Parameters.GetParameter(Name="P6")
+parameter5.Expression = "0.1 [mm]"
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "12.25 [mm]"
+parameter2.Expression = "5.0 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "14.5 [mm]"
+parameter2.Expression = "5.0 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "16.75 [mm]"
+parameter2.Expression = "5.0 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession4 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "19.0 [mm]"
+parameter2.Expression = "5.0 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession5 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+parameter1.Expression = "10.0 [mm]"
+parameter2.Expression = "8.75 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession5 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "12.25 [mm]"
+parameter2.Expression = "8.75 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession6 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "14.5 [mm]"
+parameter2.Expression = "8.75 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession7 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "16.75 [mm]"
+parameter2.Expression = "8.75 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession8 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+Save()
+Update()
+parameter1.Expression = "19.0 [mm]"
+parameter2.Expression = "8.75 [mm]"
+parameter3.Expression = "0.4 [mm]"
+parameter4.Expression = "0.4 [mm]"
+parameter5.Expression = "0.1 [mm]"
+backgroundSession9 = UpdateAllDesignPoints(DesignPoints=[designPoint1])

@@ -114,13 +114,13 @@
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        6 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     6 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23\dummy.dat
-  OUTPUT FILE NAME             = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23\solve.out
+  INPUT FILE NAME              = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC\dummy.dat
+  OUTPUT FILE NAME             = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC\solve.out
   START-UP FILE MODE           = NOREAD
   STOP FILE MODE               = NOREAD
 
  RELEASE= 2024 R1              BUILD= 24.1      UP20231106   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file0  05:56:50  FEB 19, 2026 CP=      0.062
+ CURRENT JOBNAME=file0  21:33:28  FEB 19, 2026 CP=      0.078
 
 
  PARAMETER _DS_PROGRESS =     999.0000000    
@@ -129,20 +129,26 @@
 
 
 
- *** NOTE ***                            CP =       0.188   TIME= 05:56:50
+ *** NOTE ***                            CP =       0.219   TIME= 21:33:28
  The /CONFIG,NOELDB command is not valid in a distributed memory         
  parallel solution.  Command is ignored.                                 
 
- *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  5.94722222    
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5577778    
 
  TITLE= 
  design--Modal (B5)                                                            
 
+  ACT Extensions:
+      LSDYNA, 2024.1
+      5f463412-bd3e-484b-87e7-cbc0a665e474, wbex
+ /COM,     ANSYSMotion, 2024.1
+      20180725-3f81-49eb-9f31-41364844c769, wbex
+  
 
  SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23\
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC\
 
  SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
@@ -168,7 +174,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   05:56:50  FEB 19, 2026 CP=      0.203
+ 20120530  VERSION=WINDOWS x64   21:33:28  FEB 19, 2026 CP=      0.250
 
  design--Modal (B5)                                                            
 
@@ -184,18 +190,18 @@
  *********** Fixed Supports ***********
 
 
- ***** ROUTINE COMPLETED *****  CP =         0.391
+ ***** ROUTINE COMPLETED *****  CP =         0.438
 
 
- --- Number of total nodes = 9506
+ --- Number of total nodes = 13767
  --- Number of contact elements = 0
  --- Number of spring elements = 0
  --- Number of bearing elements = 0
- --- Number of solid elements = 4516
+ --- Number of solid elements = 6967
  --- Number of condensed parts = 0
- --- Number of total elements = 4516
+ --- Number of total elements = 6967
 
- *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  5.94722222    
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5577778    
 
  *****  MAPDL SOLUTION ROUTINE  *****
 
@@ -203,7 +209,7 @@
  PERFORM A MODAL ANALYSIS
   THIS WILL BE A NEW ANALYSIS
 
- PARAMETER _THICKRATIO =     0.000000000    
+ PARAMETER _THICKRATIO =     1.000000000    
 
 
  USE SYM. BLOCK LANCZOS MODE EXTRACTION METHOD
@@ -236,21 +242,21 @@
 
  *ENDIF
 
- *** NOTE ***                            CP =       0.469   TIME= 05:56:50
+ *** NOTE ***                            CP =       0.625   TIME= 21:33:28
  The automatic domain decomposition logic has selected the MESH domain   
  decomposition method with 6 processes per solution.                     
 
  *****  MAPDL SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =       0.469   TIME= 05:56:50
+ *** WARNING ***                         CP =       0.719   TIME= 21:33:28
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** NOTE ***                            CP =       0.469   TIME= 05:56:50
+ *** NOTE ***                            CP =       0.812   TIME= 21:33:28
  The model data was checked and warning messages were found.             
   Please review output or errors file (                                  
  C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ 
- \ScrEF23\file0.err ) for these warning messages.                        
+ \Scr14AC\file0.err ) for these warning messages.                        
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
       --- GIVE SUGGESTIONS AND RESET THE KEY OPTIONS ---
@@ -262,7 +268,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   05:56:50  FEB 19, 2026 CP=      0.469
+ 20120530  VERSION=WINDOWS x64   21:33:28  FEB 19, 2026 CP=      0.812
 
  design--Modal (B5)                                                            
 
@@ -280,7 +286,7 @@
    NUMBER OF MODES TO EXPAND . . . . . . . . . . .ALL
    ELEMENT RESULTS CALCULATION . . . . . . . . . .OFF
 
- *** NOTE ***                            CP =       0.469   TIME= 05:56:50
+ *** NOTE ***                            CP =       0.812   TIME= 21:33:28
  The conditions for direct assembly have been met.  No .emat or .erot    
  files will be produced.                                                 
 
@@ -288,8 +294,8 @@
   
      D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
   
-  ...Number of elements: 4516
-  ...Number of nodes:    9506
+  ...Number of elements: 6967
+  ...Number of nodes:    13767
   ...Decompose to 6 CPU domains
   ...Element load balance ratio =     1.001
 
@@ -310,59 +316,59 @@
 
    TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
                Translational mass               |   Coupled translational/rotational mass
-        0.12177E-04    0.0000        0.0000     |     0.0000       0.22566E-04   0.88588E-10
-         0.0000       0.12177E-04    0.0000     |   -0.22566E-04    0.0000       0.14196E-10
-         0.0000        0.0000       0.12177E-04 |   -0.88588E-10  -0.14196E-10    0.0000    
+        0.38571E-04    0.0000        0.0000     |     0.0000       0.29275E-03  -0.24837E-09
+         0.0000       0.38571E-04    0.0000     |   -0.29275E-03    0.0000       0.90778E-08
+         0.0000        0.0000       0.38571E-04 |    0.24837E-09  -0.90778E-08    0.0000    
      ------------------------------------------ | ------------------------------------------
                                                 |         Rotational mass (inertia)
-                                                |    0.28035E-02  -0.14547E-08   0.57174E-10
-                                                |   -0.14547E-08   0.34298E-02   0.25372E-09
-                                                |    0.57174E-10   0.25372E-09   0.60357E-02
+                                                |    0.12068E-01   0.12251E-06  -0.10944E-06
+                                                |    0.12251E-06   0.14410E-01   0.11947E-07
+                                                |   -0.10944E-06   0.11947E-07   0.20012E-01
 
-   TOTAL MASS = 0.12177E-04
+   TOTAL MASS = 0.38571E-04
      The mass principal axes coincide with the global Cartesian axes
 
-   CENTER OF MASS (X,Y,Z)=   0.11658E-05  -0.72749E-05    1.8532    
+   CENTER OF MASS (X,Y,Z)=   0.23535E-03   0.64394E-05    7.5899    
 
    TOTAL INERTIA ABOUT CENTER OF MASS
-        0.27617E-02  -0.14547E-08   0.83481E-10
-       -0.14547E-08   0.33880E-02   0.89553E-10
-        0.83481E-10   0.89553E-10   0.60357E-02
+        0.98461E-02   0.12251E-06  -0.40543E-07
+        0.12251E-06   0.12188E-01   0.13832E-07
+       -0.40543E-07   0.13832E-07   0.20012E-01
      The inertia principal axes coincide with the global Cartesian axes
 
 
   *** MASS SUMMARY BY ELEMENT TYPE ***
 
   TYPE      MASS
-     1  0.121772E-04
+     1  0.385713E-04
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 72062.7657 at element 4447.                                   
- Minimum = 434.080882 at element 1174.                                   
+ Maximum = 49672.064 at element 4344.                                    
+ Minimum = 996.932935 at element 538.                                    
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1      4516  SOLID187      0.500   0.000111
- Time at end of element matrix formulation CP = 1.28125.                 
+        1      6967  SOLID187      0.703   0.000101
+ Time at end of element matrix formulation CP = 1.84375.                 
 
   BLOCK LANCZOS CALCULATION OF UP TO     6 EIGENVECTORS.
-  NUMBER OF EQUATIONS              =        27426
-  MAXIMUM WAVEFRONT                =          248
+  NUMBER OF EQUATIONS              =        39645
+  MAXIMUM WAVEFRONT                =          308
   MAXIMUM MODES STORED             =            6
   MINIMUM EIGENVALUE               =  0.00000E+00
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
 
-  Process memory allocated for solver              =    17.349 MB
-  Process memory required for in-core solution     =    16.554 MB
-  Process memory required for out-of-core solution =     9.160 MB
+  Process memory allocated for solver              =    14.474 MB
+  Process memory required for in-core solution     =    13.802 MB
+  Process memory required for out-of-core solution =     7.777 MB
 
-  Total memory allocated for solver                =    75.567 MB
-  Total memory required for in-core solution       =    72.096 MB
-  Total memory required for out-of-core solution   =    41.059 MB
+  Total memory allocated for solver                =   130.041 MB
+  Total memory required for in-core solution       =   124.037 MB
+  Total memory required for out-of-core solution   =    63.290 MB
 
- *** NOTE ***                            CP =       1.828   TIME= 05:56:50
+ *** NOTE ***                            CP =       2.344   TIME= 21:33:29
  The Distributed Sparse Matrix Solver used by the Block Lanczos          
  eigensolver is currently running in the in-core memory mode.  This      
  memory mode uses the most amount of memory in order to avoid using the  
@@ -370,21 +376,21 @@
  fastest solution time.  This mode is recommended if enough physical     
  memory is present to accommodate all of the solver data.                
 
-  Process memory required for in-core LANCZOS Workspace             =     19.955177 MB
-  Process memory required for out-of-core LANCZOS Workspace         =     969.351563 KB
+  Process memory required for in-core LANCZOS Workspace             =     23.842690 MB
+  Process memory required for out-of-core LANCZOS Workspace         =     1.039192 MB
 
-  Total   memory required for in-core LANCZOS Workspace             =     108.356918 MB
-  Total   memory required for out-of-core LANCZOS Workspace         =     5.408981 MB
+  Total   memory required for in-core LANCZOS Workspace             =     155.341599 MB
+  Total   memory required for out-of-core LANCZOS Workspace         =     6.527664 MB
 
   Lanczos Memory Mode : INCORE
 
 
-  >> Shift # 1 :  |                                  : 6 Eigenvalues Converged
+  >> Shift # 1 :  | |                                : 6 Eigenvalues Converged
 
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   05:56:50  FEB 19, 2026 CP=      2.062
+ 20120530  VERSION=WINDOWS x64   21:33:29  FEB 19, 2026 CP=      2.766
 
  design--Modal (B5)                                                            
 
@@ -395,16 +401,16 @@
   MODE    FREQUENCY (HERTZ)      
 
 
-    1     91.76873572896    
-    2     688.7660946757    
-    3     720.4919781328    
-    4     1071.773084695    
-    5     1283.054781082    
-    6     1407.436618269    
+    1     264.3363935453    
+    2     1501.836325485    
+    3     1528.031680299    
+    4     1644.801942127    
+    5     2041.665299539    
+    6     2478.222784196    
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   05:56:50  FEB 19, 2026 CP=      2.094
+ 20120530  VERSION=WINDOWS x64   21:33:29  FEB 19, 2026 CP=      2.812
 
  design--Modal (B5)                                                            
 
@@ -415,14 +421,14 @@
           ***** PARTICIPATION FACTOR CALCULATION *****  X  DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01  -0.12303E-07    0.000037    0.151368E-15    0.137617E-08    0.124305E-10
-     2     688.766       0.14519E-02   0.41314E-06    0.001246    0.170686E-12    0.155318E-05    0.140169E-07
-     3     720.492       0.13879E-02   0.20740E-06    0.000626    0.430164E-13    0.194426E-05    0.353255E-08
-     4     1071.77       0.93303E-03   0.87315E-05    0.026342    0.762393E-10    0.695079E-03    0.626085E-05
-     5     1283.05       0.77939E-03   0.64976E-05    0.019602    0.422192E-10    0.107892E-02    0.346708E-05
-     6     1407.44       0.71051E-03   0.33147E-03    1.000000    0.109873E-06     1.00000        0.902291E-02
+     1     264.336       0.37831E-02   0.61097E-08    0.000009    0.373287E-16    0.807500E-10    0.967784E-12
+     2     1501.84       0.66585E-03   0.25544E-06    0.000376    0.652473E-13    0.141225E-06    0.169160E-08
+     3     1528.03       0.65444E-03  -0.59660E-06    0.000877    0.355928E-12    0.911174E-06    0.922780E-08
+     4     1644.80       0.60798E-03  -0.22989E-05    0.003381    0.528503E-11    0.123438E-04    0.137020E-06
+     5     2041.67       0.48980E-03  -0.10282E-05    0.001512    0.105717E-11    0.146307E-04    0.274083E-07
+     6     2478.22       0.40351E-03  -0.67990E-03    1.000000    0.462268E-06     1.00000        0.119848E-01
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.109992E-06                    0.903266E-02
+   sum                                                            0.462275E-06                    0.119849E-01
  -----------------------------------------------------------------------------------------------------------------
 
 
@@ -430,14 +436,14 @@
           ***** PARTICIPATION FACTOR CALCULATION *****  Y  DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01   0.25353E-02    1.000000    0.642752E-05    0.999933        0.527835    
-     2     688.766       0.14519E-02   0.33096E-07    0.000013    0.109531E-14    0.999933        0.899483E-10
-     3     720.492       0.13879E-02   0.20101E-05    0.000793    0.404043E-11    0.999934        0.331804E-06
-     4     1071.77       0.93303E-03  -0.20553E-04    0.008107    0.422438E-09     1.00000        0.346910E-04
-     5     1283.05       0.77939E-03  -0.10957E-05    0.000432    0.120060E-11     1.00000        0.985944E-07
-     6     1407.44       0.71051E-03   0.29257E-08    0.000001    0.855989E-17     1.00000        0.702947E-12
+     1     264.336       0.37831E-02   0.44537E-02    1.000000    0.198353E-04    0.999877        0.514251    
+     2     1501.84       0.66585E-03   0.51994E-05    0.001167    0.270340E-10    0.999878        0.700884E-06
+     3     1528.03       0.65444E-03   0.49120E-06    0.000110    0.241281E-12    0.999878        0.625546E-08
+     4     1644.80       0.60798E-03   0.52168E-07    0.000012    0.272146E-14    0.999878        0.705565E-10
+     5     2041.67       0.48980E-03  -0.49152E-04    0.011036    0.241590E-08     1.00000        0.626346E-04
+     6     2478.22       0.40351E-03   0.79714E-07    0.000018    0.635434E-14     1.00000        0.164743E-09
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.642795E-05                    0.527870    
+   sum                                                            0.198378E-04                    0.514314    
  -----------------------------------------------------------------------------------------------------------------
 
 
@@ -445,14 +451,14 @@
           ***** PARTICIPATION FACTOR CALCULATION *****  Z  DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01  -0.62231E-07    0.000025    0.387266E-14    0.605913E-09    0.318027E-09
-     2     688.766       0.14519E-02   0.25279E-02    1.000000    0.639035E-05    0.999828        0.524782    
-     3     720.492       0.13879E-02   0.33008E-04    0.013057    0.108951E-08    0.999999        0.894720E-04
-     4     1071.77       0.93303E-03  -0.30925E-06    0.000122    0.956373E-13    0.999999        0.785383E-08
-     5     1283.05       0.77939E-03  -0.20411E-05    0.000807    0.416599E-11    0.999999        0.342116E-06
-     6     1407.44       0.71051E-03   0.19179E-05    0.000759    0.367828E-11     1.00000        0.302064E-06
+     1     264.336       0.37831E-02  -0.10262E-06    0.000023    0.105314E-13    0.539067E-09    0.273036E-09
+     2     1501.84       0.66585E-03   0.13819E-04    0.003127    0.190963E-09    0.977535E-05    0.495091E-05
+     3     1528.03       0.65444E-03  -0.19996E-04    0.004524    0.399824E-09    0.302411E-04    0.103658E-04
+     4     1644.80       0.60798E-03   0.44199E-02    1.000000    0.195356E-04    0.999999        0.506481    
+     5     2041.67       0.48980E-03  -0.37061E-05    0.000839    0.137353E-10     1.00000        0.356100E-06
+     6     2478.22       0.40351E-03   0.27407E-05    0.000620    0.751137E-11     1.00000        0.194740E-06
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.639145E-05                    0.524872    
+   sum                                                            0.195363E-04                    0.506497    
  -----------------------------------------------------------------------------------------------------------------
 
 
@@ -460,14 +466,14 @@
           ***** PARTICIPATION FACTOR CALCULATION *****ROTX DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01  -0.31981E-02    0.133027    0.102277E-04    0.173173E-01    0.364817E-02
-     2     688.766       0.14519E-02   0.31365E-03    0.013047    0.983777E-07    0.174839E-01    0.350909E-04
-     3     720.492       0.13879E-02  -0.24041E-01    1.000000    0.577957E-03    0.996071        0.206155    
-     4     1071.77       0.93303E-03   0.15233E-02    0.063365    0.232054E-05     1.00000        0.827727E-03
-     5     1283.05       0.77939E-03   0.14130E-04    0.000588    0.199646E-09     1.00000        0.712130E-07
-     6     1407.44       0.71051E-03   0.53730E-05    0.000223    0.288688E-10     1.00000        0.102974E-07
+     1     264.336       0.37831E-02  -0.31445E-01    0.645922    0.988761E-03    0.292440        0.819324E-01
+     2     1501.84       0.66585E-03  -0.48682E-01    1.000000    0.236991E-02    0.993374        0.196379    
+     3     1528.03       0.65444E-03  -0.68157E-03    0.014000    0.464534E-06    0.993511        0.384930E-04
+     4     1644.80       0.60798E-03   0.15334E-03    0.003150    0.235142E-07    0.993518        0.194848E-05
+     5     2041.67       0.48980E-03   0.46811E-02    0.096158    0.219131E-04    0.999999        0.181580E-02
+     6     2478.22       0.40351E-03  -0.50630E-04    0.001040    0.256341E-08     1.00000        0.212414E-06
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.590604E-03                    0.210666    
+   sum                                                            0.338107E-02                    0.280168    
  -----------------------------------------------------------------------------------------------------------------
 
 
@@ -475,14 +481,14 @@
           ***** PARTICIPATION FACTOR CALCULATION *****ROTY DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01   0.49079E-06    0.000019    0.240870E-12    0.379278E-09    0.702281E-10
-     2     688.766       0.14519E-02   0.20808E-04    0.000826    0.432975E-09    0.682149E-06    0.126238E-06
-     3     720.492       0.13879E-02  -0.18017E-05    0.000071    0.324620E-11    0.687261E-06    0.946460E-09
-     4     1071.77       0.93303E-03   0.93563E-04    0.003713    0.875398E-08    0.144714E-04    0.255231E-05
-     5     1283.05       0.77939E-03  -0.76495E-04    0.003035    0.585155E-08    0.236853E-04    0.170607E-05
-     6     1407.44       0.71051E-03  -0.25200E-01    1.000000    0.635061E-03     1.00000        0.185158    
+     1     264.336       0.37831E-02  -0.19482E-06    0.000004    0.379551E-13    0.174448E-10    0.263393E-11
+     2     1501.84       0.66585E-03   0.46919E-04    0.001006    0.220138E-08    0.101181E-05    0.152766E-06
+     3     1528.03       0.65444E-03   0.18408E-04    0.000395    0.338847E-09    0.116755E-05    0.235146E-07
+     4     1644.80       0.60798E-03   0.73827E-05    0.000158    0.545050E-10    0.119260E-05    0.378242E-08
+     5     2041.67       0.48980E-03  -0.35891E-04    0.000769    0.128815E-08    0.178465E-05    0.893920E-07
+     6     2478.22       0.40351E-03  -0.46645E-01    1.000000    0.217572E-02     1.00000        0.150986    
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.635076E-03                    0.185162    
+   sum                                                            0.217573E-02                    0.150986    
  -----------------------------------------------------------------------------------------------------------------
 
 
@@ -490,21 +496,21 @@
           ***** PARTICIPATION FACTOR CALCULATION *****ROTZ DIRECTION
                                                                                   CUMULATIVE     RATIO EFF.MASS
   MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
-     1     91.7687       0.10897E-01  -0.10222E-04    0.000328    0.104482E-09    0.107243E-06    0.173106E-07
-     2     688.766       0.14519E-02  -0.19510E-04    0.000625    0.380637E-09    0.497939E-06    0.630642E-07
-     3     720.492       0.13879E-02   0.27591E-04    0.000884    0.761288E-09    0.127935E-05    0.126131E-06
-     4     1071.77       0.93303E-03   0.70087E-03    0.022460    0.491216E-06    0.505477E-03    0.813850E-04
-     5     1283.05       0.77939E-03  -0.31205E-01    1.000000    0.973744E-03    0.999984        0.161331    
-     6     1407.44       0.71051E-03   0.12367E-03    0.003963    0.152955E-07     1.00000        0.253416E-05
+     1     264.336       0.37831E-02  -0.22049E-04    0.000381    0.486168E-09    0.145190E-06    0.242943E-07
+     2     1501.84       0.66585E-03  -0.81922E-03    0.014159    0.671119E-06    0.200570E-03    0.335365E-04
+     3     1528.03       0.65444E-03   0.57859E-01    1.000000    0.334772E-02    0.999971        0.167289    
+     4     1644.80       0.60798E-03   0.27425E-03    0.004740    0.752147E-07    0.999993        0.375855E-05
+     5     2041.67       0.48980E-03  -0.14295E-03    0.002471    0.204333E-07    0.999999        0.102107E-05
+     6     2478.22       0.40351E-03  -0.47359E-04    0.000819    0.224287E-08     1.00000        0.112078E-06
  -----------------------------------------------------------------------------------------------------------------
-   sum                                                            0.974252E-03                    0.161415    
+   sum                                                            0.334849E-02                    0.167327    
  -----------------------------------------------------------------------------------------------------------------
 
 
 
 
 
- *** NOTE ***                            CP =       2.094   TIME= 05:56:50
+ *** NOTE ***                            CP =       2.812   TIME= 21:33:29
  The modes requested are mass normalized (Nrmkey on MODOPT).  However,   
  the modal masses and kinetic energies below are calculated with unit    
  normalized modes.                                                       
@@ -513,22 +519,22 @@
 
                                                                          EFFECTIVE MASS
   MODE  FREQUENCY   MODAL MASS     KENE      |      X-DIR      RATIO%   Y-DIR      RATIO%   Z-DIR      RATIO% 
-     1   91.77      0.6298E-05   1.047       |    0.1514E-15    0.00  0.6428E-05   52.78  0.3873E-14    0.00
-     2   688.8      0.5093E-05   47.69       |    0.1707E-12    0.00  0.1095E-14    0.00  0.6390E-05   52.48
-     3   720.5      0.1894E-05   19.41       |    0.4302E-13    0.00  0.4040E-11    0.00  0.1090E-08    0.01
-     4   1072.      0.3499E-05   79.34       |    0.7624E-10    0.00  0.4224E-09    0.00  0.9564E-13    0.00
-     5   1283.      0.9738E-06   31.64       |    0.4222E-10    0.00  0.1201E-11    0.00  0.4166E-11    0.00
-     6   1407.      0.1615E-05   63.13       |    0.1099E-06    0.90  0.8560E-17    0.00  0.3678E-11    0.00
+     1   264.3      0.1911E-04   26.35       |    0.3733E-16    0.00  0.1984E-04   51.43  0.1053E-13    0.00
+     2   1502.      0.8000E-05   356.2       |    0.6525E-13    0.00  0.2703E-10    0.00  0.1910E-09    0.00
+     3   1528.      0.7015E-05   323.3       |    0.3559E-12    0.00  0.2413E-12    0.00  0.3998E-09    0.00
+     4   1645.      0.1452E-04   775.3       |    0.5285E-11    0.00  0.2721E-14    0.00  0.1954E-04   50.65
+     5   2042.      0.7221E-05   594.1       |    0.1057E-11    0.00  0.2416E-08    0.01  0.1374E-10    0.00
+     6   2478.      0.9663E-05   1171.       |    0.4623E-06    1.20  0.6354E-14    0.00  0.7511E-11    0.00
  --------------------------------------------------------------------------------------------------------------
-   sum                                       |    0.1100E-06    0.90  0.6428E-05   52.79  0.6391E-05   52.49
+   sum                                       |    0.4623E-06    1.20  0.1984E-04   51.43  0.1954E-04   50.65
  --------------------------------------------------------------------------------------------------------------
 
 
  *** MAPDL BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-        3.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
-        0.312 MB WRITTEN ON MODAL MATRIX FILE: file0.mode
-        0.812 MB WRITTEN ON RESULTS FILE: file0.rst
+        4.000 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
+        0.438 MB WRITTEN ON MODAL MATRIX FILE: file0.mode
+        1.312 MB WRITTEN ON RESULTS FILE: file0.rst
  *************** Write FE CONNECTORS *********
 
  WRITE OUT CONSTRAINT EQUATIONS TO FILE= file.ce                                                                                                                                                                                                                                                             
@@ -538,17 +544,17 @@
  FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =         2.172
+ ***** ROUTINE COMPLETED *****  CP =         2.875
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  5.94750000    
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5580556    
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   05:56:51  FEB 19, 2026 CP=      2.172
+ 20120530  VERSION=WINDOWS x64   21:33:30  FEB 19, 2026 CP=      2.891
 
  design--Modal (B5)                                                            
 
@@ -556,7 +562,7 @@
 
           ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       2.172   TIME= 05:56:51
+ *** NOTE ***                            CP =       2.891   TIME= 21:33:30
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -576,37 +582,37 @@
  EXIT THE MAPDL POST1 DATABASE PROCESSOR
 
 
- ***** ROUTINE COMPLETED *****  CP =         2.266
+ ***** ROUTINE COMPLETED *****  CP =         2.891
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  5.94750000    
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5583333    
 
  PARAMETER _PREPTIME =     0.000000000    
 
  PARAMETER _SOLVTIME =     1.000000000    
 
- PARAMETER _POSTTIME =     0.000000000    
+ PARAMETER _POSTTIME =     1.000000000    
 
- PARAMETER _TOTALTIM =     1.000000000    
+ PARAMETER _TOTALTIM =     2.000000000    
 
- *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.00132979    
+ *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.00086133    
 
- *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.296799000E-01
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.514673000E-01
 
  *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
 
- *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  27426.0000    
+ *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  39645.0000    
 
  /FCLEAN COMMAND REMOVING ALL LOCAL FILES
- --- Total number of nodes = 9506
- --- Total number of elements = 4516
- --- Element load balance ratio = 1.00132979
- --- Time to combine distributed files = 2.96799E-02
+ --- Total number of nodes = 13767
+ --- Total number of elements = 6967
+ --- Element load balance ratio = 1.00086133
+ --- Time to combine distributed files = 5.14673E-02
  --- Sparse memory mode = 2
- --- Number of DOF = 27426
+ --- Number of DOF = 39645
 
  EXIT MAPDL WITHOUT SAVING DATABASE
 
@@ -617,7 +623,7 @@
 +--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
 Release: 2024 R1            Build: 24.1       Update: UP20231106   Platform: WINDOWS x64 
-Date Run: 02/19/2026   Time: 05:56     Process ID: 7008
+Date Run: 02/19/2026   Time: 21:33     Process ID: 26216
 Operating System: Windows 10  (Build: 19045)
 
 Processor Model: AMD Ryzen 5 5600G with Radeon Graphics
@@ -644,42 +650,41 @@ Input File: dummy.dat
 
   Core                Machine Name   Working Directory
  -----------------------------------------------------
-     0             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
-     1             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
-     2             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
-     3             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
-     4             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
-     5             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\ScrEF23
+     0             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
+     1             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
+     2             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
+     3             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
+     4             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
+     5             DESKTOP-0DVSFS6   C:\Users\Administrator\Desktop\Thesis\root\ansys_files\_ProjectScratch\Scr14AC
  
-Latency time from master to core     1 =    2.759 microseconds
-Latency time from master to core     2 =    2.709 microseconds
-Latency time from master to core     3 =    2.460 microseconds
-Latency time from master to core     4 =    2.270 microseconds
-Latency time from master to core     5 =    2.263 microseconds
+Latency time from master to core     1 =    6.074 microseconds
+Latency time from master to core     2 =    2.346 microseconds
+Latency time from master to core     3 =    2.269 microseconds
+Latency time from master to core     4 =    2.312 microseconds
+Latency time from master to core     5 =    2.262 microseconds
  
-Communication speed from master to core     1 = 10712.23 MB/sec
-Communication speed from master to core     2 = 11882.66 MB/sec
-Communication speed from master to core     3 = 14769.69 MB/sec
-Communication speed from master to core     4 = 14556.84 MB/sec
-Communication speed from master to core     5 = 14051.60 MB/sec
+Communication speed from master to core     1 =  8254.57 MB/sec
+Communication speed from master to core     2 =  7738.29 MB/sec
+Communication speed from master to core     3 = 12583.96 MB/sec
+Communication speed from master to core     4 =  9693.21 MB/sec
+Communication speed from master to core     5 = 11584.80 MB/sec
 
-Total CPU time for main thread                    :        1.2 seconds
-Total CPU time summed for all threads             :        3.2 seconds
+Total CPU time for main thread                    :        1.7 seconds
+Total CPU time summed for all threads             :        4.0 seconds
 
-Elapsed time spent obtaining a license            :        0.4 seconds
+Elapsed time spent obtaining a license            :        0.3 seconds
 Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
-Elapsed time spent solution - preprocessing       :        0.0 seconds
-Elapsed time spent computing solution             :        0.7 seconds
-Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.1 seconds
+Elapsed time spent computing solution             :        1.0 seconds
+Elapsed time spent solution - postprocessing      :        0.1 seconds
 Elapsed time spent post-processing model (/POST1) :        0.0 seconds
  
 Eigensolver used                                  :            Block Lanczos
-Equation solver computational rate                :       26.6 Gflops
-Equation solver effective I/O rate                :       11.7 GB/sec
+Equation solver computational rate                :       40.6 Gflops
 
-Sum of disk space used on all processes           :       30.3 MB
+Sum of disk space used on all processes           :       44.0 MB
 
-Sum of memory used on all processes               :      433.0 MB
+Sum of memory used on all processes               :      899.0 MB
 Sum of memory allocated on all processes          :     3392.0 MB
 Physical memory available                         :         15 GB
 Total amount of I/O written to disk               :        0.0 GB
@@ -699,13 +704,13 @@ Total amount of I/O read from disk                :        0.0 GB
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
- |  Max Database Used(Master)      6 MB     Max Scratch Used(Master)    142 MB |
- |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)    60 MB |
- |  Sum Database Used(All)        11 MB     Sum Scratch Used(All)       422 MB |
+ |  Max Database Used(Master)      8 MB     Max Scratch Used(Master)    147 MB |
+ |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)   148 MB |
+ |  Sum Database Used(All)        13 MB     Sum Scratch Used(All)       886 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          3.188       Time  =  05:56:51          |
+ |        CP Time      (sec) =          3.984       Time  =  21:33:30          |
  |        Elapsed Time (sec) =          3.000       Date  =  02/19/2026        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

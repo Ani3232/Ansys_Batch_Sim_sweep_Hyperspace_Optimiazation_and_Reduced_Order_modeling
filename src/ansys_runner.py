@@ -19,6 +19,7 @@ import json
 
 try:
     # Update input parameters
+    
     beam_length_param = Parameters.GetParameter(Name="{params_mapping['beam_length']}")
     beam_length_param.Expression = "{input_params['beam_length']} [mm]"
     
@@ -36,7 +37,9 @@ try:
     
     # Update the design point
     backgroundSession = UpdateAllDesignPoints(DesignPoints=[Parameters.GetDesignPoint(Name="0")])
+    Save()
     
+    Update()
     # Get output parameters
     output_params = {{}}
     

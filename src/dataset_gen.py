@@ -104,7 +104,7 @@ bounds = {
     "fillet_size": (0.1000, 0.6000),
     "beam_width":  (0.4000, 0.8000),
     "beam_height": (5.0000, 20.000),
-    "beam_length": (10.000, 19.000)
+    "beam_length": (10.000, 17.000)
 }
 
 print("[ ",colored("x","green")," ]","    Iteration division is set to 5 between bounds")

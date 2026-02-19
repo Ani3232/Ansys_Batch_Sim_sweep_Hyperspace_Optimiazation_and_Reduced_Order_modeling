@@ -68,7 +68,7 @@ Before using this automation:
 2. **Run the Sweep Script**
 
    ```bash
-   python src/sweep.py
+   python src/main.py
    ```
 
    When prompted, **enter the Workbench server port number** to connect.
@@ -159,9 +159,25 @@ for each design_point in sweep_space:
 Include this in a `requirements.txt` if sharing the project:
 
 ```
-pandas
-numpy
-pywin32   # if using Windows COM for Workbench
+Package                                     |      Version
+--------------------------------------------|--------------------
+ansys-api-mechanical                        |       0.1.2
+ansys-api-platform-instancemanagement       |       1.1.3
+ansys-api-workbench                         |       0.2.0
+ansys-mechanical-core                       |       0.10.11
+ansys-mechanical-env                        |       0.1.6
+ansys-platform-instancemanagement           |       1.1.2
+ansys-pythonnet                             |       3.1.0rc6
+ansys-tools-common                          |       0.4.3
+ansys-tools-path                            |       0.3.2
+ansys-workbench-core                        |       0.7.0
+debugpy                                     |       1.8.20
+numpy                                       |       2.4.2
+packaging                                   |       26.0
+pandas                                      |       3.0.0
+pip                                         |       26.0.1
+pywin32                                     |       311
+
 ```
 
 ---
@@ -177,5 +193,4 @@ pywin32   # if using Windows COM for Workbench
 
 * This repository currently has no stars or forks; consider adding topics and description to attract users. ([GitHub][3])
 * Integrate with established parameter sweep tools in Ansys where relevant. ([optics.ansys.com][4])
-
 
