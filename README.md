@@ -26,7 +26,10 @@ This tool works by connecting to a running Ansys Workbench session and controlli
 ├── dataset/                    # Input/Output data CSVs for sweep results
 ├── src/                        # Python automation logic
 │   ├── ansys_runner.py         # Interface for connecting and running Workbench
-│   └── sweep.py                # Control loop for executing parameter sweeps
+│   |── sweep.py                # Control loop for executing parameter sweeps
+|   |── clean_logs.py           # Used to clear the stored logs
+|   |── dataset_gen.py          # Used to generate dataset for the sweep
+|   |── main.py                 # This one combines the total process sequentially
 ├── .gitignore
 └── README.md                   # Project documentation
 ```
