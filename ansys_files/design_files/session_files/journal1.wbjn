@@ -1,0 +1,124 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Update(AllDependencies=True)
+geometryComponent1.Update(AllDependencies=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometryComponent1.Update(AllDependencies=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometryComponent1.Update(AllDependencies=True)
+Save(Overwrite=True)
+geometry1.Exit()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="PLA")
+matlProp1 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1240 [kg m^-3]"]])
+matlProp2 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="GPa")
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["2.636 [GPa]"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.33"]])
+matlProp3 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Orthotropic",
+    Qualifiers={"Definition": "", "Behavior": "Orthotropic"})
+matlProp3.Delete(Behavior="Orthotropic")
+materialPropertyData1 = matlProp3.GetPropertyData(
+    Name="Elasticity",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic", "Derive from": "Young's Modulus and Poisson's Ratio"})
+materialPropertyData1.SetSuppression(Suppressed=False)
+matlProp4 = matl1.CreateProperty(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp4.SetVariableProperty(
+    VariableName="Tensile Yield Strength",
+    Property="Unit",
+    Value="MPa")
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Tensile Yield Strength"],
+    Values=[["30 [MPa]"]])
+matlProp5 = matl1.CreateProperty(
+    Name="Compressive Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp5.SetVariableProperty(
+    VariableName="Compressive Yield Strength",
+    Property="Unit",
+    Value="MPa")
+matlProp5.SetData(
+    Index=-1,
+    Variables=["Compressive Yield Strength"],
+    Values=[["50 [MPa]"]])
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+template2 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+engineeringDataComponent1 = system1.GetComponent(Name="Engineering Data")
+system2 = template2.CreateSystem(
+    ComponentsToShare=[engineeringDataComponent1, geometryComponent1, modelComponent1],
+    Position="Right",
+    RelativeTo=system1)
+setup1 = system2.GetContainer(ComponentName="Setup")
+setup1.Edit()
+resultsComponent1 = system2.GetComponent(Name="Results")
+resultsComponent1.Update(AllDependencies=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+parameter1 = Parameters.GetParameter(Name="P3")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.5 [mm]")
+parameter2 = Parameters.GetParameter(Name="P4")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.5 [mm]")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+results1 = system2.GetContainer(ComponentName="Results")
+results1.Edit()
+geometry1.Edit(IsSpaceClaimGeometry=True)
+Save(Overwrite=True)
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+setup1.Edit()
+model1.Exit()
+parameter3 = Parameters.GetParameter(Name="P1")
+designPoint1.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="10 [mm]")
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+geometry1.Exit()
+Parameters.ExportAllDesignPointsData(FilePath="C:/Users/Administrator/Desktop/Thesis/self/parameters.csv")
+Save(Overwrite=True)
+Save(Overwrite=True)
+setup2 = system1.GetContainer(ComponentName="Setup")
+setup2.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)

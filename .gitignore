@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+ansys_env/
+.env/
+venv/
+env/
+
+# Ansys files
+*.wbk
+*.wbj
+*.mechdb
+*.ds
+*.agdb
+*.cmdb
+*.rst
+*.lock
+
+# Logs
+*.log
+logs/
+
+# Dataset (if you don't want to track data)
+# dataset/dataset.csv
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

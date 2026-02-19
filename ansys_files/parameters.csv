@@ -1,0 +1,8 @@
+﻿# 
+# 02/19/2026 03:13:13
+# The parameters defined in the project are:
+# ,P1 - beam_height [mm],P3 - beam_width_2 [mm],P4 - beam_width_1 [mm],P5 - beam_length [mm],P6 - fillet_size [mm],P7 - Total Deformation Reported Frequency [Hz],P8 - Total Deformation 2 Reported Frequency [Hz],P9 - Total Deformation 3 Reported Frequency [Hz],P10 - Total Deformation 4 Reported Frequency [Hz],P11 - Directional Deformation Maximum [mm],P12 - Equivalent Stress Maximum [MPa]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12
+DP 0,10,0.5,0.5,17,0.5,104.39896611277472,846.30999401928636,969.45111304409784,983.85411112522638,0.23192514479160309,3.0547838391657471
