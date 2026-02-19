@@ -182,15 +182,3 @@ pywin32                                     |       311
 
 ---
 
-## 📄 License & Contributions
-
-* Choose a license (MIT, Apache 2.0 for open-source usage).
-* Accept contributions via pull requests.
-
----
-
-## 📌 Notes
-
-* This repository currently has no stars or forks; consider adding topics and description to attract users. ([GitHub][3])
-* Integrate with established parameter sweep tools in Ansys where relevant. ([optics.ansys.com][4])
-
